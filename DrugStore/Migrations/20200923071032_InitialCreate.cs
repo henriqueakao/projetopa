@@ -12,9 +12,9 @@ namespace DrugStore.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Nome = table.Column<string>(nullable: true),
+                    Nome = table.Column<string>(nullable: false),
                     Fabricante = table.Column<string>(nullable: true),
-                    Dosagem = table.Column<string>(nullable: true),
+                    Dosagem = table.Column<string>(nullable: false),
                     Preco = table.Column<double>(nullable: false)
                 },
                 constraints: table =>

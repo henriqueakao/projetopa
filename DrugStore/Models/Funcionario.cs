@@ -5,12 +5,11 @@ using System.Threading.Tasks;
 
 namespace DrugStore.Models
 {
-    public class Medicamento
+    public class Funcionario
     {
         public int Id { get; set; }
         public string Nome { get; set; }
-        public string Fabricante { get; set; }
-        public string Dosagem { get; set; }
-        public string Preco { get; set; }
+        public string CPF { get; set; }
+        public string Salario { get; set; }
     }
 }

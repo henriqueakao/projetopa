@@ -1,10 +1,10 @@
-﻿@model IEnumerable<DrugStore.Models.Medicamento>
+﻿@model IEnumerable<DrugStore.Models.Funcionario>
 
 @{
-    ViewData["Title"] = "Medicamentos";
+    ViewData["Title"] = "Funcionário";
 }
 
-<h1>Medicamentos</h1>
+<h1>Funcionários</h1>
 
 <p>
     <a asp-action="Create">Adicionar</a>
@@ -16,13 +16,10 @@
                 @Html.DisplayNameFor(model => model.Nome)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Fabricante)
+                @Html.DisplayNameFor(model => model.CPF)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Dosagem)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Preco)
+                @Html.DisplayNameFor(model => model.Salario)
             </th>
             <th></th>
         </tr>
@@ -34,13 +31,10 @@
                 @Html.DisplayFor(modelItem => item.Nome)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Fabricante)
+                @Html.DisplayFor(modelItem => item.CPF)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Dosagem)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Preco)
+                @Html.DisplayFor(modelItem => item.Salario)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
