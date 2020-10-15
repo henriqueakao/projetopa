@@ -16,5 +16,6 @@ namespace DrugStore.Dados
 
         public DbSet<Medicamento> Medicamento { get; set; }
         public DbSet<Funcionario> Funcionario { get; set; }
+        public DbSet<DrugStore.Models.Estoque> Estoque { get; set; }
     }
 }

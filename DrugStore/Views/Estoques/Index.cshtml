@@ -1,28 +1,28 @@
-﻿@model IEnumerable<DrugStore.Models.Medicamento>
+﻿@model IEnumerable<DrugStore.Models.Estoque>
 
 @{
-    ViewData["Title"] = "Medicamentos";
+    ViewData["Title"] = "Index";
 }
 
-<h1>Medicamentos</h1>
+<h1>Estoque</h1>
 
 <p>
-    <a asp-action="Create">Adicionar</a>
+    <a asp-action="Create">Create New</a>
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Nome)
+                @Html.DisplayNameFor(model => model.Medicamento.Nome)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Fabricante)
+                @Html.DisplayNameFor(model => model.Medicamento.Fabricante)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Dosagem)
+                @Html.DisplayNameFor(model => model.Medicamento.Preco)
             </th>
             <th>
-                <a>Preço</a>
+                @Html.DisplayNameFor(model => model.Quantidade)
             </th>
             <th></th>
         </tr>
@@ -31,16 +31,16 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Nome)
+                @Html.DisplayFor(modelItem => item.Medicamento.Nome)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Fabricante)
+                @Html.DisplayFor(modelItem => item.Medicamento.Fabricante)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Dosagem)
+                @Html.DisplayFor(modelItem => item.Medicamento.Preco)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Preco)
+                @Html.DisplayFor(modelItem => item.Quantidade)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
