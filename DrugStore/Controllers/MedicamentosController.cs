@@ -54,7 +54,7 @@ namespace DrugStore.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Nome,Fabricante,Dosagem,Preco")] Medicamento medicamento)
+        public async Task<IActionResult> Create([Bind("Id,Nome,Fabricante,Dosagem,Preco,Quantidade")] Medicamento medicamento)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +86,7 @@ namespace DrugStore.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Nome,Fabricante,Dosagem,Preco")] Medicamento medicamento)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Nome,Fabricante,Dosagem,Preco,Quantidade")] Medicamento medicamento)
         {
             if (id != medicamento.Id)
             {

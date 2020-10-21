@@ -12,5 +12,6 @@ namespace DrugStore.Models
         public string Fabricante { get; set; }
         public string Dosagem { get; set; }
         public string Preco { get; set; }
+        public int Quantidade { get; set; }
     }
 }

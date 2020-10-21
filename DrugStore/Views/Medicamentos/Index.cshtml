@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<DrugStore.Models.Medicamento>
 
 @{
-    ViewData["Title"] = "Medicamentos";
+    ViewData["Title"] = "Index";
 }
 
 <h1>Medicamentos</h1>
@@ -22,7 +22,10 @@
                 @Html.DisplayNameFor(model => model.Dosagem)
             </th>
             <th>
-                <a>Preço</a>
+                @Html.DisplayNameFor(model => model.Preco)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Quantidade)
             </th>
             <th></th>
         </tr>
@@ -41,6 +44,9 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Preco)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Quantidade)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |

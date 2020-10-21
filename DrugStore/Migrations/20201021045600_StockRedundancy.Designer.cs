@@ -3,14 +3,16 @@ using DrugStore.Dados;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace DrugStore.Migrations
 {
     [DbContext(typeof(DrugStoreContext))]
-    partial class DrugStoreContextModelSnapshot : ModelSnapshot
+    [Migration("20201021045600_StockRedundancy")]
+    partial class StockRedundancy
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
